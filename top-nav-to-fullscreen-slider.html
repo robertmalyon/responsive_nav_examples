@@ -7,6 +7,7 @@
         font-family: "Lato", sans-serif;
       }
 
+      /* Controls look and behaviour of navigation menu icon */
       .hamburger-icon {
         font-size: 3rem;
         cursor: pointer;
@@ -16,6 +17,7 @@
         z-index: 1;
       }
 
+      /* This is the background of the slide-in menu */
       .overlay {
         height: 100%;
         width: 0;
@@ -28,6 +30,7 @@
         transition: 0.5s;
       }
 
+      /* Content div to control how content is displayed within the slide-in menu */
       .overlay-content {
         position: relative;
         top: 25%;
@@ -57,10 +60,12 @@
         font-size: 60px;
       }
 
+      /* Styles for the normal top navigation menu displayed on large screens */
       .navbar-lg {
         display: none;
       }
 
+      /* Flex container for nav bar content */
       .navbar-lg .container {
         display: flex;
         justify-content: flex-end;
@@ -84,6 +89,7 @@
         }
       }
 
+      /* Switch from slide-in nav to standard top screen nav whe screen exceeds 600px */
       @media screen and (min-width: 600px) {
         .hamburger-icon {
           display: none;
@@ -95,6 +101,7 @@
     </style>
   </head>
   <body>
+    <!-- Small screen nav -->
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
@@ -107,8 +114,10 @@
       </div>
     </div>
 
+    <!--Hamburger Icon-->
     <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
 
+    <!--600px+ nav-->
     <div class="navbar-lg">
       <div class="container">
         <div class="navbar-links-lg">
